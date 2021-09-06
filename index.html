@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <script>
+        var videos = ["https://www.youtube.com/embed/Gg3AKW4a9gY?autoplay=1", "https://www.youtube.com/embed/WIdeWbMuYis?autoplay=1", "https://www.youtube.com/embed/gv7G7U-aOqE?autoplay=1", "https://www.youtube.com/embed/4rhyiwfyzAQ?autoplay=1"];
+        window.onload = function () {
+            var playerDiv = document.getElementById("random_player");
+            var player = document.createElement("IFRAME");
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+            player.setAttribute('width', '1080');
+            player.setAttribute('height', '1920');
+            player.setAttribute('src', randomVideoUrl);
+
+            playerDiv.appendChild(player);
+        };
+    </script>
+</head>
+
 <body>
-
-
-
-<div class="video-wrapper">
-   <iframe width="1080px" height="1920px" src="//www.youtube.com/embed/ZmxW5QD7cvM?autoplay=1&showinfo=0&modestbranding=1" frameborder="0" allowfullscreen>
-</div>
-
-}
-
+    <div id="random_player" />
 </body>
-</html>
 
+</html>
